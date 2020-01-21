@@ -1,11 +1,6 @@
 <template>
   <section>
-    <rocket
-      v-for="(singleRocket, index) in rockets"
-      :singleRocket="singleRocket"
-      :key="index"
-      :removeRocket="removeRocket"
-    ></rocket>
+    <rocket v-for="rocket in rockets" :rocket="rocket" :key="rocket" :removeRocket="removeRocket"></rocket>
   </section>
 </template>
 
