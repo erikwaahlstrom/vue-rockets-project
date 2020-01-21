@@ -1,16 +1,16 @@
 <template>
   <section>
-    <h2>{{rocket.name}}</h2>
-    <p>{{rocket.country}}</p>
-    <p>{{rocket.description}}</p>
-    <img class="rocket-images" :src="rocket.image" />
-    <button @click="removeRocket(rocket)" type="button">Delete</button>
+    <h2>{{singleRocket.name}}</h2>
+    <p>{{singleRocket.country}}</p>
+    <p>{{singleRocket.description}}</p>
+    <img class="rocket-images" :src="singleRocket.image" />
+    <button @click="removeRocket(singleRocket)" type="button">Delete</button>
   </section>
 </template>
 
 <script>
 export default {
-  props: ["rocket", "removeRocket"]
+  props: ["singleRocket", "removeRocket"]
 };
 </script>
 
