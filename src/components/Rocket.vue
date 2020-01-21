@@ -4,7 +4,7 @@
     <p>{{singleRocket.country}}</p>
     <p>{{singleRocket.description}}</p>
     <img class="rocket-images" :src="singleRocket.image" />
-    <button @click="removeRocket(singleRocket)" type="button">Delete</button>
+    <button @click="removeRocket(index)" type="button">Delete</button>
   </section>
 </template>
 

@@ -1,9 +1,9 @@
 <template>
   <section>
     <rocket
-      v-for="singleRocket in rockets"
+      v-for="(singleRocket, index) in rockets"
       :singleRocket="singleRocket"
-      :key="singleRocket.id"
+      :key="index"
       :removeRocket="removeRocket"
     ></rocket>
   </section>

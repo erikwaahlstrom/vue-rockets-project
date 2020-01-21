@@ -26,8 +26,7 @@ export default {
     addRocket(rocket) {
       this.rockets.push(rocket);
     },
-    removeRocket(rocket) {
-      const index = this.rockets.indexOf(rocket);
+    removeRocket(index) {
       this.rockets.splice(index, 1);
     }
   }
