@@ -1,38 +1,24 @@
 <template>
   <section>
-    <new-rockets-form :addRocket="addRocket"></new-rockets-form>
-    <rocket-list :rockets="rockets" :removeRocket="removeRocket"></rocket-list>
+    <new-rockets-form></new-rockets-form>
+    <rocket-list></rocket-list>
   </section>
 </template>
 
 <script>
 import NewRocketsForm from "../components/NewRocketsForm.vue";
 import RocketList from "../components/RocketList.vue";
-import API from "../lib/API";
+
 export default {
   name: "rockets",
   components: {
     NewRocketsForm,
     RocketList
   },
-
   async mounted() {
-    this.rockets = await API.getRockets();
-  },
-  data: () => ({
-    rockets: []
-  }),
-  methods: {
-    addRocket(rocket) {
-      this.rockets.push(rocket);
-    },
-    removeRocket(rocket) {
-      const index = this.rockets.indexOf(rocket);
-      this.rockets.splice(index, 1);
-    }
+    this.$store.dispatch("getRockets");
   }
 };
 </script>
 
-<style>
-</style>
+<style></style>
